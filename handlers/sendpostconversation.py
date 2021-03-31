@@ -140,7 +140,8 @@ def send_messages(context: CallbackContext):
                 context.bot.send_photo(653634001, photo, caption=caption + f'\n\n{u}')
             except TelegramError as e:
                 # errors_dict.update({'user_id': u[ID], 'user_tg_id': u[TG_ID], 'error_message': e.message})
-                errors_dict.update({'error_message': e.message})
+                # errors_dict.update({'error_message': e.message})
+                errors_dict.update({u: e.message})
         end_time = datetime.datetime.now()
 
     elif 'video' in user_data:
@@ -155,7 +156,8 @@ def send_messages(context: CallbackContext):
                 context.bot.send_video(653634001, video, caption=caption + f'\n\n{u}')
             except TelegramError as e:
                 # errors_dict.update({'user_id': u[ID], 'user_tg_id': u[TG_ID], 'error_message': e.message})
-                errors_dict.update({'error_message': e.message})
+                # errors_dict.update({'error_message': e.message})
+                errors_dict.update({u: e.message})
         end_time = datetime.datetime.now()
 
     text = f'✅ Sending this message to all users have been successfully finished !'
