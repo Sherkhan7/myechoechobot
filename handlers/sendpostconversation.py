@@ -135,7 +135,7 @@ def send_messages(context: CallbackContext):
         for u in range(1, 501):
             try:
                 caption = user_data['caption']
-                time.sleep(0.5)
+                time.sleep(0.05)
                 # context.bot.send_photo(u[TG_ID], photo, caption=caption)
                 context.bot.send_photo(653634001, photo, caption=caption + f'\n\n{u}')
             except TelegramError as e:
@@ -150,7 +150,7 @@ def send_messages(context: CallbackContext):
         for u in range(1, 501):
             try:
                 caption = user_data['caption']
-                time.sleep(0.5)
+                time.sleep(0.05)
                 # context.bot.send_video(u[TG_ID], video, caption=caption)
                 context.bot.send_video(653634001, video, caption=caption + f'\n\n{u}')
             except TelegramError as e:
