@@ -33,7 +33,7 @@ def main():
     updater.dispatcher.add_handler(callback_query_handler)
 
     # ...and the error handler
-    updater.dispatcher.add_error_handler(error_handler)
+    # updater.dispatcher.add_error_handler(error_handler)
 
     # updater.start_polling()
     # updater.idle()
